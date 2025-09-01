@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.conteaner {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #fcd34d, #f472b6, #06b6d4);
+    padding: 10px;
+    background-size: 200% 200%;
+    animation: gradientMove 10s ease infinite;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-color: #ffff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h1 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h1 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #ffff;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(imges/unchecked-41.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+
+ul li.check {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.check::before {
+    background-image: url(imges/images.png)
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background-color: #edeef0;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
